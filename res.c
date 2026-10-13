@@ -1,4 +1,4 @@
-j#include <stdio.h>
+#include <stdio.h>
 #define MAX_ALUNOS 50
 #define MAX_DISC 5
 
