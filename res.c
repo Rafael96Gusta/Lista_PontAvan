@@ -149,3 +149,22 @@ void mediaDisciplina(int notas[][MAX_DISC], int n, int m, int disciplina, float 
 void alterarNota(int notas[][MAX_DISC], int aluno, int disciplina, int novaNota) {
     notas[aluno][disciplina] = novaNota;
 }
+
+do {
+    printf("Aluno para alterar a nota (1 a %d): ", n);
+    scanf("%d", &aluno);
+} while (aluno < 1 || aluno > n);
+
+do {
+    printf("Disciplina (1 a %d): ", m);
+    scanf("%d", &disciplina);
+} while (disciplina < 1 || disciplina > m);
+
+do {
+    printf("Nova nota (0 a 10): ");
+    scanf("%d", &novaNota);
+} while (novaNota < 0 || novaNota > 10);
+
+alterarNota(notas, aluno - 1, disciplina - 1, novaNota);
+
+calcularMedia(notas, n, m, medias);
