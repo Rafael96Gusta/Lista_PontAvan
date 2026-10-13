@@ -55,8 +55,9 @@ int main(void) {
     buscarMaiorMedia(medias, n, &indiceMaior, &maior);
 
     mostrarResultados(alunos, medias, n);
-    printf("\nMaior media: matricula %d, %.1f\n",
+    printf("\nMaior media: %d \n\nMatricula: %.1f\n",
            alunos[indiceMaior].matricula, maior);
+    printf("\nQuantidade de alunos aprovados: %d\n", contarAprovados(medias, n));
 
     return 0;
 }
@@ -148,12 +149,3 @@ void mediaDisciplina(int notas[][MAX_DISC], int n, int m, int disciplina, float 
 void alterarNota(int notas[][MAX_DISC], int aluno, int disciplina, int novaNota) {
     notas[aluno][disciplina] = novaNota;
 }
-
-mostrarResultados(alunos, medias, n);
-
-printf("\nMaior media: matricula %d, %.1f\n",
-       alunos[indiceMaior].matricula, maior);
-
-printf("\nQuantidade de alunos aprovados: %d\n", contarAprovados(medias, n));
-
-return 0;
