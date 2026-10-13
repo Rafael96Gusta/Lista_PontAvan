@@ -168,3 +168,7 @@ do {
 alterarNota(notas, aluno - 1, disciplina - 1, novaNota);
 
 calcularMedia(notas, n, m, medias);
+
+void alterarNota(int notas[][MAX_DISC], int aluno, int disciplina, int novaNota) {
+    notas[aluno][disciplina] = novaNota;
+}
